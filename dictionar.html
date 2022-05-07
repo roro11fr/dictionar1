@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<input type="text" id="myText" value="Some text">
+<button onclick="myFunction()">Introduce cuvant</button>
+<br>
+<input type="text" id="myText2" value="Scrie">
+<button onclick="myFunction2()">Cauta cuvant</button>
+
+
+<p id="demo"></p>
+<p id="dea"></p>
+
+
+<script>
+let y = " ";
+function myFunction() {
+  var x = document.getElementById("myText").value;
+   y += x;
+
+}
+function myFunction2 () {
+	let x = document.getElementById("myText2").value;
+	if(y.match(/^x$/)!= 0){
+    	document.getElementById("dea").innerHTML = "gasit";
+        }
+        else {
+    		document.getElementById("dea").innerHTML = "nu exista";
+        }
+}
+
+
+
+
+
+</script>
+
+</body>
+</html>
