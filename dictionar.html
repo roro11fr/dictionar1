@@ -2,40 +2,33 @@
 <html>
 <body>
 
-
-<input type="text" id="myText" value="Some text">
+<input type="text" id="myText" value="Scrie">
 <button onclick="myFunction()">Introduce cuvant</button>
 <br>
 <input type="text" id="myText2" value="Scrie">
 <button onclick="myFunction2()">Cauta cuvant</button>
-
-
 <p id="demo"></p>
-<p id="dea"></p>
-
-
+	
 <script>
-let y = " ";
+var y = [" "];
 function myFunction() {
-  var x = document.getElementById("myText").value;
-   y += x;
-
+	var x = document.getElementById("myText").value;
+	y.push(x);
 }
+
 function myFunction2 () {
-	let x = document.getElementById("myText2").value;
-	if(y.match(/^x$/)!= 0){
-    	document.getElementById("dea").innerHTML = "gasit";
-        }
-        else {
-    		document.getElementById("dea").innerHTML = "nu exista";
-        }
+	var ok = 0;
+	var z = document.getElementById("myText2").value;
+	for (var i = 0; i < y.length; i++) {
+    		if (y[i] == z)
+     			ok = 1;
+	}
+	if(ok == 1)
+    		document.getElementById("demo").innerHTML = "gasit";
+        else 
+    		document.getElementById("demo").innerHTML = "nu exista";
 }
-
-
-
-
 
 </script>
-
 </body>
 </html>
